@@ -12,49 +12,32 @@ loop do
     operador = gets.strip.to_i
     system "clear"
 
-    case operador 
-    when 1
-        puts "\n"
-        puts "Insira o primeiro valor: "
-        num1 = gets.strip.to_i
-        puts "\n"
-        puts "Agora insira o segundo valor:"
-        num2 = gets.strip.to_i
-        resultado = num1 + num2
-        puts "\n"
-        puts "O resultado da soma de #{num1} e #{num2} é #{resultado}"
-    when 2
-        puts "\n"
-        puts "Insira o primeiro valor: "
-        num1 = gets.strip.to_i
-        puts "\n"
-        puts "Agora insira o segundo valor:"
-        num2 = gets.strip.to_i
-        resultado = num1 - num2
-        puts "\n"
-        puts "O resultado da subtração de #{num1} e #{num2} é #{resultado}"
-    when 3
-        puts "\n"
-        puts "Insira o primeiro valor: "
-        num1 = gets.strip.to_i
-        puts "\n"
-        puts "Agora insira o segundo valor:"
-        num2 = gets.strip.to_i
-        resultado = num1 * num2
-        puts "\n"
-        puts "O resultado da multiplicação de #{num1} e #{num2} é #{resultado}"
-    when 4
-        puts "\n"
-        puts "Insira o primeiro valor: "
-        num1 = gets.strip.to_i
-        puts "\n"
-        puts "Agora insira o segundo valor:"
-        num2 = gets.strip.to_i
-        resultado = num1 / num2
-        puts "\n"
-        puts "O resultado da divisão de #{num1} e #{num2} é #{resultado}"
-    end
     if operador == 0
         break
     end
+
+    puts "\n"
+    puts "Insira o primeiro valor: "
+    num1 = gets.strip.to_i
+    puts "\n"
+    puts "Agora insira o segundo valor:"
+    num2 = gets.strip.to_i
+    case operador 
+
+    when 1
+        resultado = num1 + num2
+        operacao = "soma"
+    when 2
+        resultado = num1 - num2
+        operacao = "subtracao"
+    when 3
+        resultado = num1 * num2
+        operacao = "multiplicacao"
+    when 4
+        resultado = num1 / num2
+        operacao = "divisao"
+    end
+    
+    puts "\n"
+    puts "O resultado da #{operacao} de #{num1} e #{num2} é #{resultado}"
 end
